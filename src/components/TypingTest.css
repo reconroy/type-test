@@ -1,0 +1,79 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background-color: #22272b;
+  font-family: 'Poppins', sans-serif;
+  color: #f8f9fa;
+}
+
+.word-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Margin between words */
+}
+
+.word {
+  font-size: 24px;
+  font-weight: bold;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Fading effect */
+}
+
+.current-word {
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.previous-word {
+  color: #6c757d; /* Bootstrap secondary color */
+  opacity: 0; /* Ensure no grey word is present initially */
+}
+
+.next-word {
+  color: #28a745; /* Bootstrap success color */
+}
+
+.previous-word.fade-out {
+  animation: dropAndFade 2s ease forwards; /* Apply animation to falling word */
+}
+
+@keyframes dropAndFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px); /* Adjust drop height as needed */
+  }
+}
+
+.input-area {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.result-box {
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.result-heading {
+  margin-bottom: 15px;
+}
+
+.result-value {
+  color: #28a745; /* Bootstrap success color */
+}
+
+.language-button {
+  margin: 0 10px;
+}
+
+.time-adjust-button {
+  margin: 0 10px;
+}
